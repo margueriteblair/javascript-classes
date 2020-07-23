@@ -1,11 +1,3 @@
-let bubble;
-
-
-function draw() {
-    background(0);
-    bubble.move();
-    bubble.show();
-}
 
 class Bubble {
     constructor() {
@@ -16,14 +8,16 @@ class Bubble {
         this.x = this.x + random(-5, 5);
         this.y = this.y + random(-5, 5);
     }
-    show() {
-        stroke(255);
-        strokeWeight(4);
-        noFill();
-        ellipse(bubble.x, bubble.y, 24, 24);
-    }
+
 }
 function setup() {
     bubble = new Bubble();
+
 }
 setup();
+let count = 0;
+document.getElementById('bubbleDiv').addEventListener("click", function() {
+    count++;
+    let bubble2 = new Bubble;
+    console.log(count);
+})
